@@ -26,7 +26,7 @@ class Idcard
      *
      * 1: man, 2: woman
      */
-    public static function gender(idcard)
+    public static function gender($idcard)
     {
         if(!self::valid($idcard)) {
             throw new \Exception('idcard error');
