@@ -1,0 +1,21 @@
+{
+    "name": "lavamake/idcard",
+    "description": "idcard verify",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lavamake",
+            "email": "lavamake@outlook.com"
+        }
+    ],
+    "require": {
+        "lavamake/authcode": "^dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lavamake\\idcard\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
