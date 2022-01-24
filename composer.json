@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "lavamake/authcode": "^dev-master"
+        "lavamake/authcode": "^1.0"
     },
     "autoload": {
         "psr-4": {
