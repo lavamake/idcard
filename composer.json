@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Lavamake\\idcard\\": "src/"
+            "Lavamake\\Idcard\\": "src/"
         }
     },
     "minimum-stability": "dev",
