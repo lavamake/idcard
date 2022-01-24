@@ -31,7 +31,7 @@ class Idcard
         if(!self::valid($idcard)) {
             throw new \Exception('idcard error');
         }
-        return ((intval(substr(idcard, 16, 1)) % 2) === 0) ? 2 : 1;
+        return ((intval(substr($idcard, 16, 1)) % 2) === 0) ? 2 : 1;
     }
 
 
