@@ -8,6 +8,10 @@ class Idcard
 {
     public static function birthday($idcard)
     {
+        if(!self::valid($idcard)) {
+            throw new \Exception('idcard error');
+        }
+
         $date = substr($idcard,6,strlen($idcard) == 15 ? 6 : 8);
 
         if(strlen($date) == 6) {
@@ -16,6 +20,20 @@ class Idcard
             return substr($date,0,4) ."-".substr($date,4,2)."-".substr($date,6,2);
         }
     }
+
+    /**
+     * gender
+     *
+     * 1: man, 2: woman
+     */
+    public static function gender(idcard)
+    {
+        if(!self::valid($idcard)) {
+            throw new \Exception('idcard error');
+        }
+        return ((intval(substr(idcard, 16, 1)) % 2) === 0) ? 2 : 1;
+    }
+
 
     public static function encode($idcard)
     {
@@ -32,6 +50,9 @@ class Idcard
 
     public static function simplify($idcard)
     {
+        if(!self::valid($idcard)) {
+            throw new \Exception('idcard error');
+        }
         return substr($idcard,0,2) .'****'. substr($idcard,6,strlen($idcard) == 15 ? 6 : 8) ."****" . substr($idcard,-2,2);
     }
 
